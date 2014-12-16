@@ -1,0 +1,23 @@
+<div ng-click="clap();" class="frame">
+	<div
+		ng-repeat="circle in circles"
+		ng-class="{'circle': true, 'throbbing': circle.throbbing}" 
+		ng-style="{'left': circle.left + '%', 'top': circle.top + '%', 'border-width': circle.borderWidth + 'px', 'background-color': 'rgba(' + circle.red + ',' + circle.green + ',' + circle.blue + ',0.3)'}">    
+	</div>
+</div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<table style="width: 100%">
+			<tr>
+				<td style="text-align: left; vertical-align: middle; width: 20%;">
+					<button ng-click="back();" type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-chevron-left"></span> Back</button>
+ </td>
+				<td style="text-align: center; vertical-align: middle; width: 60%;">
+					<strong>Clap App</strong>
+				<td style="text-align: right; vertical-align: middle; width: 20%;">
+					&nbsp;
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,39 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<table style="width: 100%">
+			<tr>
+				<td style="text-align: left; vertical-align: middle; width: 20%;">
+					<button ng-click="navigate('/')" type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-chevron-left"></span> Back</button>
+ </td>
+				<td style="text-align: center; vertical-align: middle; width: 60%;">
+					<strong>Clap App</strong>
+				<td style="text-align: right; vertical-align: middle; width: 20%;">
+					&nbsp;
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="panel-body">
+		<form name="create_form" role="form" novalidate>
+			<div ng-class="{'form-group': true,  'has-feedback': true,  'has-error': create_form.name.$invalid}">
+				<label class="control-label" for="name">Name</label>
+				<input type="text" name="name" class="form-control" id="name" placeholder="Name" ng-model="name" required safe>
+			</div>
+		</form>
+	</div>
+	<div class="panel-footer">
+		<table style="width: 100%">
+			<tr>
+				<td style="text-align: left; vertical-align: top; width: 20%";>
+					<button ng-click="save();" type="button" class="btn btn-default btn-sm" ng-disabled="create_form.$invalid" ><span class="glyphicon glyphicon-save"></span> Save</button>
+                                </td>
+                                <td style="text-align: center; vertical-align: bottom; width: 60%;">
+					&nbsp;
+                                </td>
+                                <td style="text-align: right; vertical-align: top; width: 20%";>
+					&nbsp;
+                                </td>
+                        </tr>
+                </table>
+        </div>
+</div>
