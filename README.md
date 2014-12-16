@@ -1,4 +1,4 @@
-Physicians' Choice Weight Loss
-==============================
+Clap App
+========
 
 TODO JET: Finish readme
