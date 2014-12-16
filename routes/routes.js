@@ -1,6 +1,10 @@
 angular.module('myApp').config(['$routeProvider', function($routeProvider) {
 	$routeProvider.
 		when('/', {
+      	  		templateUrl: 'views/update.html',
+       			controller: 'UpdateCtrl'
+      		}).
+		when('/home', {
       	  		templateUrl: 'views/home.html',
        			controller: 'HomeCtrl'
       		}).

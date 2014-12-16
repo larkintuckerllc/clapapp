@@ -13,6 +13,15 @@
 	<link rel="stylesheet" href="bower_components/angular-block-ui/angular-block-ui.min.css">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="app.css">
+	<script>
+		// EXECUTING EARLY TO CATCH ALL CACHED FILE COUNTS
+		if (applicationCache) {
+			var myGlobalCachedCount = 0;
+                	applicationCache.addEventListener('progress', function() {
+				myGlobalCachedCount += 1;
+                	});
+		}
+	</script>
 	<script src="bower_components/angular/angular.min.js"></script>
 	<script src="bower_components/angular-route/angular-route.min.js"></script>
 	<script src="bower_components/angular-block-ui/angular-block-ui.min.js"></script>

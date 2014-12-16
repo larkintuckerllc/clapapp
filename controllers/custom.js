@@ -54,7 +54,7 @@ customControllers.controller('RoomCtrl', ['$scope', 'myFirebase', 'navigator', '
 		if (selfRef && selfRef.name) {
 			myFirebase.remove(selfRef, function(error) {
 				if (! error) {
-					navigator.navigate('/');
+					navigator.navigate('/home');
 				} else {
 					navigator.navigate('/error');
 				}

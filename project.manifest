@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 2014-12-16v2
+# 2014-12-16v1
 
 CACHE:
 
@@ -27,6 +27,7 @@ views/home.html
 views/rooms_create.html
 views/room.html
 views/error.html
+views/update.html
 app.js
 app.css
 controllers/custom.js

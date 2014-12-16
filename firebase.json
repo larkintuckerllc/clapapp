@@ -1,5 +1,5 @@
 {
-	"firebase": "clap",
+	"firebase": "clapapp",
 	"public": ".",
 	"ignore": [
 		"firebase.json",
