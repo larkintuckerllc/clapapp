@@ -13,7 +13,6 @@ customControllers.controller('HomeCtrl', ['$scope', 'myFirebase', 'navigator', f
 	}, function() {
 		navigator.navigate('/error');
 	});
-
 }]);
 
 customControllers.controller('RoomsCreateCtrl', ['$scope', 'myFirebase', 'navigator', function ($scope, myFirebase, navigator) {

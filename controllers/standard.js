@@ -6,7 +6,7 @@ standardControllers.controller('ErrorCtrl', ['$scope', '$window', function ($sco
 	}
 }]);
 
-standardControllers.controller('UpdateCtrl', ['$scope', '$window', '$timeout', 'navigator', function ($scope, $window, $timeout, navigator) {
+standardControllers.controller('UpdateCtrl', ['$scope', '$window', '$timeout', 'navigator', 'myFirebase', function ($scope, $window, $timeout, navigator, myFirebase) {
 
 	// CATCHING UP TO COUNT STARTED EARLIER IN INDEX.HTML
 	$scope.cachedCount = $window.myGlobalCachedCount;
@@ -14,6 +14,12 @@ standardControllers.controller('UpdateCtrl', ['$scope', '$window', '$timeout', '
 	$scope.reloadApplication = function() {
 		$window.location.href = '/';
 	}
+	
+	// HACK TO WORK AROUND ANDROID 4.4.2 STOCK BROWSER ISSUE - SUBMITTED TO FIREBASE 
+        myFirebase.onConnected(function(snapshot) {
+        }, function() {
+        });
+
         if ($window.applicationCache) {
                 $window.applicationCache.addEventListener('noupdate', function(e) {
 			$timeout(function() {
